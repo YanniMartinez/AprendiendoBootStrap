@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- Para este tipo de archivos se le hace una minificación, es decir, le quita todos los espacios, esto hace que sea más ligero. Sin embargo se vuelve ilegible. Es buena práctica minificar los archivos de Js y CSS. -->
+        <link rel="stylesheet" href="Assets/css/bootstrap.min.css"> <!-- Vinculamos con un archivo que descargamos -->
+        
+        <!-- ***Tambien podemos cargar BootStrap desde un link*** -->
+        <!-- Los demás archivos tienen funcionalidades especificas, en este caso elegimos el que tiene todo lo del bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Permite que sea responsive -->
+        <title>Aprendiendo Bootstrap</title>
+    </head>
+    <body>
+        <!-- Bootstrap nos permite maquetar sin saber casi nada de CSS -->
+        <!-- <h1 class="text-primary">Hola desde Bootstrap</h1>  --><!-- Lo primero que vemos diferente es el tipo de letra -->
+        <!-- Si queremos que sea de un color ponemos la clase -->
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                <a class="navbar-brand text-white" href="#">Generation</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link text-white" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contacto</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        
+        <main>
+            
+        </main>
+        <!-- Es importante poner al final los JS para que una vez que se haya cargado todo entonces pueda referenciar de buena manera. Si lo ponemos al inicio es posible que JS haga referencia a cosas que aún no se cargan -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="Assets/js/bootstrap.min.js"></script> <!-- Vinculamos con un archivo JS -->
+    </body>
+</html>
