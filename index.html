@@ -1,48 +1,138 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-        <!-- Para este tipo de archivos se le hace una minificación, es decir, le quita todos los espacios, esto hace que sea más ligero. Sin embargo se vuelve ilegible. Es buena práctica minificar los archivos de Js y CSS. -->
-        <link rel="stylesheet" href="Assets/css/bootstrap.min.css"> <!-- Vinculamos con un archivo que descargamos -->
-        
-        <!-- ***Tambien podemos cargar BootStrap desde un link*** -->
-        <!-- Los demás archivos tienen funcionalidades especificas, en este caso elegimos el que tiene todo lo del bootstrap -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Permite que sea responsive -->
-        <title>Aprendiendo Bootstrap</title>
-    </head>
-    <body>
-        <!-- Bootstrap nos permite maquetar sin saber casi nada de CSS -->
-        <!-- <h1 class="text-primary">Hola desde Bootstrap</h1>  --><!-- Lo primero que vemos diferente es el tipo de letra -->
-        <!-- Si queremos que sea de un color ponemos la clase -->
+<!doctype html>
+<html lang="es">
+  <head>
 
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-                <a class="navbar-brand text-white" href="#">Generation</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link text-white" href="#">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contacto</a>
-                      </li>
-                  </ul>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Bootstrap grid</title>
+  </head>
+  <body>
+    <h1 class="text-white bg-dark text-center p-2">Bootstrap Grid</h1>
+
+    <div class="container bg-light mt-5">
+        <div class="row bg-dark">
+            <div class="col-6 text-white">Cristian</div>
+        </div>
+        <!-- Los break points en Grid nos permite hacer responsivo el diseño en función del tamaño de la pantalla, ya vienen algunos existentes-->
+
+        <div class="row mt-3 mb-3">
+            <!-- Aqui van las descripciones e imagenes -->
+            <!-- Cuando ponemos col-numero le estamos especificando un tamaño fijo aproximado -->
+          <div class="col-md-8 border border-dark bg-light"> <!-- Col tomará espacio como considere necesario -->
+                <!-- 1 -->
+                <div class="row">
+                    <div class="card m-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p>
+                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt eius modi veritatis earum itaque dolorem adipisci ea facere ab aperiam totam accusantium architecto, eum at voluptatum quaerat voluptatem sit recusandae?
+                          </p>
+                        </div>
+                      </div>
                 </div>
-              </nav>
-        </header>
-        
-        <main>
-            
-        </main>
-        <!-- Es importante poner al final los JS para que una vez que se haya cargado todo entonces pueda referenciar de buena manera. Si lo ponemos al inicio es posible que JS haga referencia a cosas que aún no se cargan -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="Assets/js/bootstrap.min.js"></script> <!-- Vinculamos con un archivo JS -->
-    </body>
+                <!-- 2 -->
+                <div class="row">
+                    <div class="card m-3" >
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt eius modi veritatis earum itaque dolorem adipisci ea facere ab aperiam totam accusantium architecto, eum at voluptatum quaerat voluptatem sit recusandae?
+                        </p>
+                        </div>
+                      </div>
+                </div>
+                <!-- 3 -->
+                <div class="row">
+                    <div class="card m-3" >
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt eius modi veritatis earum itaque dolorem adipisci ea facere ab aperiam totam accusantium architecto, eum at voluptatum quaerat voluptatem sit recusandae?
+                        </p>
+                        </div>
+                      </div>
+                </div>
+          </div>
+
+          <!-- El md nos dice que mientras sea mayor a 768 nos respeta las columnas a un lado, pero cuando es menor lo pasa a la parte de abajo -->
+          <!-- Aqui van las imagenes -->
+          <div class="col-md-4 border bg-secondary"> <!-- Si ponemos varios cool sifnicia que  -->
+                <!-- 1 -->
+                <div class="row m-1"> 
+                    <div class="card" >
+                        <img src="https://wtfonline.mx/wp-content/uploads/2018/01/58d1d5878eeb4.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                              
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="row m-1"> 
+                    <div class="card" >
+                        <img src="https://as01.epimg.net/epik/imagenes/2017/02/20/portada/1487591539_671374_1487591903_miniatura_normal.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                              
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="row m-1"> 
+                    <div class="card" >
+                        <img src="http://d1lofqbqbj927c.cloudfront.net/BO-rqp/2018/05/15213300/5afb47fe7411f561f20840b6-500x262.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                              
+                          </p>
+                        </div>
+                    </div>
+                </div>
+
+          </div>
+        </div>
+      
+        <!-- Seccion 3 -->
+        <div class="row">
+            <!-- 1 -->
+            <div class="col-md col-sm-6">
+                <img src="https://depor.com/resizer/1TIgbPLUNzuUKtG4mwRd2qrf-10=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/A6IKCR4X6NHUFA7RWNWVOXGTBY.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <!-- 2 -->
+            <div class="col-md col-sm-6">
+                <img src="https://depor.com/resizer/1TIgbPLUNzuUKtG4mwRd2qrf-10=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/A6IKCR4X6NHUFA7RWNWVOXGTBY.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <!-- 3 -->
+            <div class="col-md col-sm-6">
+                <img src="https://depor.com/resizer/1TIgbPLUNzuUKtG4mwRd2qrf-10=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/A6IKCR4X6NHUFA7RWNWVOXGTBY.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <!-- 4 -->
+            <div class="col-md col-sm-6">
+                <img src="https://depor.com/resizer/1TIgbPLUNzuUKtG4mwRd2qrf-10=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/A6IKCR4X6NHUFA7RWNWVOXGTBY.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <!-- 5 -->
+            <div class="col-md col-sm-6">
+                <img src="https://depor.com/resizer/1TIgbPLUNzuUKtG4mwRd2qrf-10=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/A6IKCR4X6NHUFA7RWNWVOXGTBY.jpg" class="img-thumbnail" alt="...">
+            </div>
+        </div>
+      
+        <!-- Pie de pagina -->
+        <div class="row bg-dark p-3">
+            <h3 class="text-white">Soy el pie de pagina</h3>
+            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laboriosam rem qui in maiores, a est magni et, deleniti corrupti unde molestias ad numquam perferendis aliquid, ab consectetur libero impedit?</p>
+        </div> 
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  </body>
 </html>
